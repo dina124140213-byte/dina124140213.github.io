@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Dina Olivia</title>
+    
+    <!-- Google Font Lucu -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Intro -->
+    <div id="intro" class="section active">
+        <h1>The Person Behind the Name! 🌈</h1>
+        <p>Ke pasar beli pepaya, kenali aku lebih dekat saja. Hallo aku Dina.</p><br>
+        <button class="btn" onclick="showSection('biodata')">Klik Aku!</button>
+    </div>
+
+    <!-- Biodata -->
+    <div id="biodata" class="section">
+        <img src="foto profil/foto_profil.jpg" alt="Foto Profil" class="profile-img-large">
+        <h1>Biodata Diri</h1>
+        <h2>Dina Olivia</h2>
+        <button class="btn" onclick="showSection('DaftarIsi')">Lihat Daftar Isi</button>
+    </div>
+
+    <!-- Daftar Isi -->
+    <div id="DaftarIsi" class="section">
+        <h1>Daftar Isi</h1>
+        <ul class="menu-list">
+            <li><button class="btn" onclick="showSection('about')">About Me</button></li>
+            <li><button class="btn" onclick="showSection('pengalaman')">Pengalaman</button></li>
+            <li><button class="btn" onclick="showSection('pendidikan')">Pendidikan</button></li>
+            <li><button class="btn" onclick="showSection('kontak')">Kontak</button></li>
+        </ul>
+        <button class="btn" onclick="showSection('biodata')">← Kembali</button>
+    </div>
+
+    <!-- About Me -->
+    <div id="about" class="section about-container">
+        <div class="about-img">
+            <img src="foto profil/foto_profil.jpg" alt="Foto Profil Dina Olivia">
+        </div>
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+                Halo, saya Dina Olivia, seorang mahasiswa Teknik Informatika di ITERA. 
+                Saya tertarik pada pengembangan perangkat lunak, desain UI/UX, dan teknologi edukasi. 
+                Saya senang belajar hal baru dan berkolaborasi dalam tim untuk menciptakan solusi kreatif.
+            </p>
+             <button class="btn" onclick="showSection('DaftarIsi')">← Kembali</button>
+        </div>
+    </div>
+
+    <!-- Pengalaman -->
+    <div id="pengalaman" class="section">
+        <h2>Pengalaman</h2>
+        <ul>
+            <li>1 - moderator pemilihan ketua angkatan informatika 2024</li>
+            <li>2 - master of cereony perlombaan baca puisi dan solo song se sumatera barat</li>
+            <li>3 - kepala divisi acara first meet dan first gathering mahasiswa baru IKM ITERA</li>
+            <li>4 - talent sekaligus narator dalam video promosi kegiatan "batagak gala"IKM ITERA</li>
+            <li>5 - Pelatihan Desain UI/UX,Mengikuti pelatihan intensif selama 3 hari mengenai prinsip desain UI/UX menggunakan Figma.  
+            Berhasil membuat prototype aplikasi mobile sederhana dengan konsep desain minimalis</li>
+       </ul>
+        <button class="btn" onclick="showSection('DaftarIsi')">← Kembali</button>
+    </div>
+
+    <!-- Pendidikan -->
+    <div id="pendidikan" class="section">
+        <h2>Pendidikan</h2>
+        <table>
+            <tr>
+                <th>Tahun</th>
+                <th>Sekolah/Universitas</th>
+                <th>Jurusan</th>
+            </tr>
+            <tr>
+                <td>2024 - Sekarang</td>
+                <td>Institut Teknologi Sumatera</td>
+                <td>Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td>2021 - 2024</td>
+                <td>SMA Negeri 2 Bukittinggi</td>
+                <td>MIPA</td>
+            </tr>
+        </table>
+        <button class="btn" onclick="showSection('DaftarIsi')">← Kembali</button>
+    </div>
+
+    <!-- Kontak -->
+    <div id="kontak" class="section">
+        <h2>Kontak</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:dina.124140213@student.itera.ac.id">dina.124140213@student.itera.ac.id</a></p>
+            <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/dinaoliivia_" target="_blank">@dinaoliivia_</a></p>
+            <p><i class="fas fa-phone"></i> Telepon: <a href="tel:081277057484">081277057484</a></p>
+        </div>
+        <button class="btn" onclick="showSection('DaftarIsi')">← Kembali</button>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
